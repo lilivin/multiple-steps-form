@@ -1,0 +1,35 @@
+@import "../../../../variables.module.scss";
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    &.firstPage{
+        justify-content: end;
+    }
+    .prevButton, .nextButton{
+        border: none;
+        background: none;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    .prevButton{
+        color: var(--primary-4);
+    }
+    .nextButton{
+        color: #FFF;
+        background: var(--primary-2);
+        padding: 10px 20px;
+        border-radius: 10px;
+        transition: 300ms;
+        &.disactive{
+            background: #6994cb;
+        }
+    }
+}
+
+@media(min-width: $horizontal-breakpoint){
+    .container{
+        margin-top: 0px;
+    }
+}

@@ -1,0 +1,29 @@
+@import "../../variables.module.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  padding: 15px;
+  border-radius: 20px;
+  width: 400px;
+}
+
+.content {
+  width: 100%;
+  margin: 0 auto;
+  height: 600px;
+}
+
+@media (min-width: $horizontal-breakpoint) {
+  .container {
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .content {
+    width: calc(100% - 400px);
+    height: 600px;
+  }
+}

@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    .name{
+        color: var(--primary-4);
+        font-size: 14px;
+    }
+    .price{
+        font-weight: 500;
+    }
+}

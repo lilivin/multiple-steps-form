@@ -1,0 +1,45 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.plansContainer{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.withAnim{
+    animation: inAnimation 450ms ease-in;
+}
+
+.withoutAnim{
+    animation: outAnimation 470ms ease-out;
+    animation-fill-mode: "forwards"
+}
+
+@keyframes inAnimation {
+    0% {
+      opacity: 0;
+      max-height: 0px;
+    }
+    100% {
+      opacity: 1;
+      max-height: 600px;
+    }
+  }
+  
+  @keyframes outAnimation {
+    0% {
+      opacity: 1;
+      max-height: 600px;
+    }
+    100% {
+      opacity: 0;
+      max-height: 0px;
+    }
+  }
+  

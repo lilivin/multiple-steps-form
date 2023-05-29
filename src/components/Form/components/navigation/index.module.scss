@@ -1,0 +1,116 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: var(--primary-2);
+  border-radius: 10px;
+  height: 100px;
+  overflow: hidden;
+  .navigationList {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    list-style: none;
+    z-index: 99;
+  }
+}
+
+.backgroundElement1,
+.backgroundElement2,
+.backgroundElement3 {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  transition: 300ms;
+}
+.backgroundElement1 {
+  &.backgroundVariant1 {
+    transform: scale(1.3);
+    left: -60px;
+    bottom: -80px;
+  }
+  &.backgroundVariant2 {
+    left: -144px;
+    bottom: -93px;
+  }
+  &.backgroundVariant3 {
+    transform: scale(1);
+    left: -159px;
+    bottom: -100px;
+  }
+  &.backgroundVariant4 {
+    left: -111px;
+    bottom: -100px;
+  }
+  &.backgroundVariant5 {
+    scale: 1.5;
+    left: -111px;
+    bottom: -70px;
+  }
+}
+.backgroundElement2 {
+  &.backgroundVariant1 {
+    transform: scale(1.2);
+    right: -90px;
+    bottom: -100px;
+  }
+  &.backgroundVariant2 {
+    transform: scale(1.4);
+    right: -136px;
+    bottom: -90px;
+  }
+  &.backgroundVariant3 {
+    transform: scale(1.7);
+    right: -135px;
+    bottom: -49px;
+  }
+  &.backgroundVariant4 {
+    right: -133px;
+    bottom: -93px;
+  }
+  &.backgroundVariant5 {
+    right: 130px;
+    bottom: -133px;
+  }
+}
+.backgroundElement3 {
+  &.backgroundVariant1 {
+    transform: scale(0.8);
+    left: -150px;
+    bottom: -110px;
+  }
+  &.backgroundVariant2 {
+    left: -41px;
+    bottom: -149px;
+  }
+  &.backgroundVariant3 {
+    transform: scale(0.7);
+    left: -34px;
+    bottom: -16px;
+  }
+  &.backgroundVariant4 {
+    transform: scale(0.8);
+    left: 13px;
+    bottom: -10px;
+  }
+  &.backgroundVariant5 {
+    transform: scale(0.8);
+    left: 100px;
+    bottom: -10px;
+  }
+}
+
+@media (min-width: 800px) {
+  .navigation {
+    width: 300px;
+    height: auto;
+    justify-content: flex-start;
+    .navigationList {
+      flex-direction: column;
+      padding: 30px 10px 0;
+    }
+  }
+}

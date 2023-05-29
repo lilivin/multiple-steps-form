@@ -1,0 +1,73 @@
+.container{
+    position: relative;
+    background: #EEE;
+    width: 100%;
+    height: 180px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: var(--color-white);
+    cursor: pointer;
+    border: 2px solid var(--primary-6);
+    transition: 200ms;
+    &.activePlan{
+        background: var(--primary-3);
+        border: 2px solid var(--primary-6);
+    }
+    &:hover{
+        border: 2px solid var(--primary-6);
+    }
+    input{
+        position: absolute;
+        opacity: 0;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        .name{
+            font-weight: 500;
+        }
+        .price{
+            font-size: 14px;
+        }
+        .additionalText{
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+}
+
+.active{
+  animation: inAnimation 450ms ease-in;
+}
+
+.disactive{
+  animation: outAnimation 470ms ease-out;
+  animation-fill-mode: "forwards"
+}
+
+@keyframes inAnimation {
+  0% {
+    opacity: 0;
+    max-height: 0px;
+  }
+  100% {
+    opacity: 1;
+    max-height: 600px;
+  }
+}
+
+@keyframes outAnimation {
+  0% {
+    opacity: 1;
+    max-height: 600px;
+  }
+  100% {
+    opacity: 0;
+    max-height: 0px;
+  }
+}

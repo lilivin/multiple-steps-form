@@ -1,0 +1,17 @@
+{
+  "arcade": {
+    "name": "Arcade",
+    "monthly": 9,
+    "yearly": 7
+  },
+  "advanced": {
+    "name": "Advanced",
+    "monthly": 12,
+    "yearly": 10
+  },
+  "pro": {
+    "name": "Pro",
+    "monthly": 15,
+    "yearly": 13
+  }
+}

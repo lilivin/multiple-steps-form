@@ -1,0 +1,13 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.addonsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
