@@ -15,6 +15,7 @@ function SingleAddOns(props: {
   const addOn = getAddOnById(id);
   return (
     <label
+      data-testid="single-add-on-container"
       className={`${styles.container} ${
         formInfo.addOns.includes(id) ? styles.active : ""
       }`}
@@ -25,15 +26,16 @@ function SingleAddOns(props: {
         id={id}
         type="checkbox"
         className={styles.checkbox}
+        data-testid="single-add-on-checkbox"
         value={id}
         checked={formInfo.addOns.includes(id)}
-        onClick={() => updateForm({name: "addOns", value: id})}
+        onChange={() => updateForm({name: "addOns", value: id})}
       />
       <div className={styles.content}>
         <span className={styles.title}>{addOn.name}</span>
         <span className={styles.subtitle}>{addOn.subtitle}</span>
       </div>
-      <span className={styles.price}>+${addOn.price}/mo</span>
+      <span className={styles.price}>{`+$${addOn.price}/mo`}</span>
     </label>
   );
 }

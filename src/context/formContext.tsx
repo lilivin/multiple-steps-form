@@ -49,25 +49,32 @@ export type FormContextType = {
 
 interface Props {
   children: React.ReactNode;
+  pageNumber?: number;
+  planPeriod?: PlanPeriodEnum;
 }
 
 export const FormContext = React.createContext<FormContextType | null>(null);
 
+export const defaultFormInfo = {
+  name: "",
+  surname: "",
+  email: "",
+  planType: PlanTypeEnum.Arcade,
+  planPeriod: PlanPeriodEnum.Monthly,
+  addOns: [AddOnsEnum.CustomizableProfile],
+};
+
+export const defaultFormError = {
+  name: false,
+  surname: false,
+  email: false,
+};
+
 const FormProvider: React.FC<Props> = ({ children }) => {
   const [currentPage, setCurrentPage] = React.useState<number>(1);
-  const [formError, setFormError] = React.useState<IFormError>({
-    name: false,
-    surname: false,
-    email: false,
-  });
-  const [formInfo, setFormInfo] = React.useState<IFormInfo>({
-    name: "",
-    surname: "",
-    email: "",
-    planType: PlanTypeEnum.Arcade,
-    planPeriod: PlanPeriodEnum.Monthly,
-    addOns: [AddOnsEnum.CustomizableProfile],
-  });
+  const [formError, setFormError] =
+    React.useState<IFormError>(defaultFormError);
+  const [formInfo, setFormInfo] = React.useState<IFormInfo>(defaultFormInfo);
 
   function checkFormError() {
     const errors = Object.values(formError).some((value) => value === true);
@@ -81,16 +88,22 @@ const FormProvider: React.FC<Props> = ({ children }) => {
       const addOns = formInfo.addOns.includes(value as AddOnsEnum)
         ? formInfo.addOns.filter((item: AddOnsEnum) => item !== value)
         : [...formInfo.addOns, value];
-  
-      setFormInfo((prev: IFormInfo) => ({
-        ...prev,
-        [name]: addOns,
-      }) as IFormInfo);
+
+      setFormInfo(
+        (prev: IFormInfo) =>
+          ({
+            ...prev,
+            [name]: addOns,
+          } as IFormInfo)
+      );
     } else {
-      setFormInfo((prev: IFormInfo) => ({
-        ...prev,
-        [name]: value,
-      }) as IFormInfo);
+      setFormInfo(
+        (prev: IFormInfo) =>
+          ({
+            ...prev,
+            [name]: value,
+          } as IFormInfo)
+      );
     }
   };
 

@@ -16,9 +16,10 @@ function SinglePlan(props: { id: PlanTypeEnum }) {
 
   const isYearly = formInfo.planPeriod === PlanPeriodEnum.Yearly ? true : false;
 
-  const showErrorMessage = useDelayUnmount(isYearly, 450);
+  const showInfoMessage = useDelayUnmount(isYearly, 450);
   return (
     <div
+      data-testid="plan-container"
       className={`${styles.container} ${
         formInfo.planType === id ? styles.activePlan : ""
       }`}
@@ -29,21 +30,24 @@ function SinglePlan(props: { id: PlanTypeEnum }) {
         alt={`${plan.name} plan icon`}
       />
       <div className={styles.content}>
-        <span className={styles.name}>{plan.name}</span>
-        <span className={styles.price}>
+        <span data-testid="plan-name" className={styles.name}>
+          {plan.name}
+        </span>
+        <span data-testid="plan-price" className={styles.price}>
           $
           {formInfo.planPeriod === PlanPeriodEnum.Monthly
             ? plan.monthly
             : plan.yearly}
           /mo
         </span>
-        {showErrorMessage && (
+        {showInfoMessage && (
           <span
+            data-testid="plan-error"
             className={`${styles.additionalText} ${
               isYearly ? styles.active : styles.disactive
             }`}
           >
-            2 months free
+            2 Months Free
           </span>
         )}
       </div>

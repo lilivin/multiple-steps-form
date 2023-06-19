@@ -5,7 +5,7 @@ import BottomNavigation from "../bottomNavigation";
 
 function PersonalInfo() {
   return (
-    <div className={styles.container}>
+    <div data-testid="personal-info" className={styles.container}>
       <div>
         <FormHeader
           title="Personal info"

@@ -23,13 +23,13 @@ function BottomNavigation() {
   }
 
   return (
-    <div className={`${styles.container} ${firstPage ? styles.firstPage : ""}`}>
+    <div data-testid="bottom-navigation-container" className={`${styles.container} ${firstPage ? styles.firstPage : ""}`}>
       {!firstPage && (
-        <button onClick={() => previousPage()} className={styles.prevButton}>
+        <button data-testid="bottom-navigation-back-button" onClick={() => previousPage()} className={styles.prevButton}>
           Go Back
         </button>
       )}
-      <button onClick={() => nextPage()} className={`${styles.nextButton} ${checkFormError() && styles.disactive}`}>
+      <button data-testid="bottom-navigation-next-button" onClick={() => nextPage()} className={`${styles.nextButton} ${checkFormError() && styles.disactive}`}>
         {lastPage ? "Confirm" : "Next Step"}
       </button>
     </div>

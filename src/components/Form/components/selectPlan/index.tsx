@@ -7,7 +7,7 @@ import BottomNavigation from "../bottomNavigation";
 
 function SelectPlan() {
   return (
-    <div className={styles.container}>
+    <div data-testid="select-plan-container" className={styles.container}>
       <div>
         <FormHeader
           title="Select your plan"

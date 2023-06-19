@@ -39,12 +39,14 @@ function Input(props: {
   }
 
   return (
-    <div className={styles.container}>
-      <label className={styles.label}>{label}</label>
+    <div data-testid="input-container" className={styles.container}>
+      <label data-testid="input-label" htmlFor={name} className={styles.label}>{label}</label>
       <input
+        data-testid="input"
         placeholder={placeholder}
         type={type}
         name={name}
+        id={name}
         value={formInfo[name as keyof IFormInfo]}
         onBlur={(e) => checkInputOnBlur(e.target.value)}
         className={`${styles.input} ${inputError && styles.error}`}
@@ -54,6 +56,7 @@ function Input(props: {
       />
       {showErrorMessage && (
         <span
+          data-testid="input-error"
           className={`${styles.errorMessage} ${
             inputError ? styles.active : styles.disactive
           }`}

@@ -8,26 +8,38 @@ import {
 
 function PeriodToggle() {
   const { formInfo, updateForm } = useContext(FormContext) as FormContextType;
-  const [isToggled, setIsToggled] = useState<boolean>(formInfo.planPeriod === PlanPeriodEnum.Monthly ? false : true);
+  const [isToggled, setIsToggled] = useState<boolean>(
+    formInfo.planPeriod === PlanPeriodEnum.Monthly ? false : true
+  );
 
   function changePeriod() {
     setIsToggled((prev) => !prev);
-    updateForm({name: "planPeriod", value: isToggled ? PlanPeriodEnum.Monthly : PlanPeriodEnum.Yearly});
+    updateForm({
+      name: "planPeriod",
+      value: isToggled ? PlanPeriodEnum.Monthly : PlanPeriodEnum.Yearly,
+    });
   }
 
   return (
-    <div className={styles.container} onClick={() => changePeriod()}>
-      <span className={`${styles.label} ${!isToggled && styles.active}`}>
+    <div data-testid="period-toggle-container" className={styles.container} onClick={() => changePeriod()}>
+      <span
+        data-testid="period-toggle-name-monthly"
+        className={`${styles.label} ${!isToggled && styles.active}`}
+      >
         Monthly
       </span>
       <button
+        data-testid="period-toggle-button"
         className={`${styles.toggleButton} ${
           isToggled ? styles.on : styles.off
         }`}
       >
         <span className={styles.pin} />
       </button>
-      <span className={`${styles.label} ${isToggled && styles.active}`}>
+      <span
+        data-testid="period-toggle-name-yearly"
+        className={`${styles.label} ${isToggled && styles.active}`}
+      >
         Yearly
       </span>
     </div>
