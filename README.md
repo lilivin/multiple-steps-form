@@ -1,46 +1,54 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Multiple Step Form
 
-## Available Scripts
 
-In the project directory, you can run:
+The "Multiple Step Form" is a project created using React Typescript & SCSS technologies. It incorporates animations, form field validations, and is fully responsive. It consists of 4 steps with data being stored in a react context, allowing users to navigate back to previous steps without losing their data. At the end of the form, users receive a summary and a confirmation message indicating the successful submission of the form data.
 
-### `npm start`
+## Run Locally
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Clone the project
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+  git clone https://github.com/lilivin/multiple-steps-form
+```
 
-### `npm test`
+Go to the project directory
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+  cd multiple-steps-form
+```
 
-### `npm run build`
+Install dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+  npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start the server
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+  npm start
+```
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Demo
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Link to demo: https://multiple-steps-form-wheat.vercel.app/
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Step 1
+![Step 1](https://thumbnails-photos.amazon.com/v1/thumbnail/eFZMmZHiQz2c_RTXpgmSRg?viewBox=1855%2C934&ownerId=A7DYBV1QQXX0U&groupShareToken=a9GziT5FQw-9ndig2DQdTw.N1wPnum2AuamcbqcgP2an8)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Step 2
+![Step 2](https://thumbnails-photos.amazon.com/v1/thumbnail/ud7vihKRR2OjRdK0ltnGVA?viewBox=1856%2C934&ownerId=A7DYBV1QQXX0U&groupShareToken=KqFUBE39T829TuBSqEmM6A.sfTkV0tV6mvjOhuWV4aacL)
 
-## Learn More
+### Step 3
+![Step 3](https://thumbnails-photos.amazon.com/v1/thumbnail/kOYGLT3ZTvaDquZjdZZE0w?viewBox=1853%2C934&ownerId=A7DYBV1QQXX0U&groupShareToken=hmOdkRAzRUO6jKPPrUoh6A.Zoo8xxVctegcG_TZP1AP7C)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Step 4
+![Step 4](https://thumbnails-photos.amazon.com/v1/thumbnail/OdqxiGpkSSyrFrWHmi2RQA?viewBox=1855%2C934&ownerId=A7DYBV1QQXX0U&groupShareToken=aQsZwVVyTwmuCQO6yGQeLQ.bWWtxLfpwTM639kdyxe3Ps)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Feedback
+![Step 5](https://thumbnails-photos.amazon.com/v1/thumbnail/Nr4gzVr9RVq7vK06o7vUhw?viewBox=1848%2C934&ownerId=A7DYBV1QQXX0U&groupShareToken=v7mPJxt4Qx6R-71pXnowkA.Xk2NlJvsUVOR4f7gZ8yV6T)
+
+### Validation
+![Step 5](https://thumbnails-photos.amazon.com/v1/thumbnail/cEfn-4C9TUOuECx2ZQ_VCQ?viewBox=1856%2C934&ownerId=A7DYBV1QQXX0U&groupShareToken=a7T_4gMJShKXgfJ7tGqVow.zH37DAfCOfNTQjOXdblWh3)
